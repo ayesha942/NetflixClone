@@ -60,4 +60,27 @@
   align-items: center;
   gap: 10px;
   cursor: pointer;
+  position: relative;
+}
+
+.navbar .dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: max-content;
+  background: #191919;
+  padding: 18px 22px;
+  border-radius: 4px;
+  display: none;
+  z-index: 2;
+}
+
+.navbar .dropdown p {
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* Show dropdown on hover */
+.navbar-profile:hover .dropdown {
+  display: block;
 }
