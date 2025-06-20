@@ -7,12 +7,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  overflow-y: auto; /* scroll for smaller screens */
 }
 
 .login-logo {
   width: 150px;
-  margin-bottom: 30px;
+  margin: 40px auto 20px auto;
+  display: block;
 }
 
 .login-form {
@@ -21,12 +22,12 @@
   background: rgba(0, 0, 0, 0.75);
   border-radius: 4px;
   padding: 60px;
-  margin: auto;
+  margin-bottom: 40px;
   color: white;
 }
 
 .login-form input {
-  width: 100%; /* ✅ Full width */
+  width: 100%;
   height: 50px;
   background: #333;
   color: white;
@@ -76,9 +77,17 @@
   width: 16px;
   height: 16px;
 }
-.form-switch span{
-    margin-left: 6px;
-    color: #fff;
-    font-weight: 500;
-    cursor: pointer;
+
+.form-switch {
+  margin-top: 20px;
+  color: #b3b3b3;
+  text-align: center;
+  font-size: 15px;
+}
+
+.form-switch span {
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 6px;
 }
