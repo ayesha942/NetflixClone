@@ -1,0 +1,17 @@
+.footer
+{
+    padding:30px 4% ;
+    max-width: 1000px;
+    margin: 0 auto;
+
+}
+.footer-icons
+{
+    display: flex;
+    gap: 30px;
+    margin: 40px ,0;
+}
+.footer-icon img{
+    width: 30px;
+    cursor: pointer;
+}
