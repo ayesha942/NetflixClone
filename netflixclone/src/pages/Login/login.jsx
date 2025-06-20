@@ -1,11 +1,30 @@
-import React from 'react'
-import './login.css'
-const login = () => {
+// src/pages/Login/login.js
+
+import React from 'react';
+import logo from '../../assets/logo.png';
+import './Login.css'
+const Login = () => {
   return (
     <div className='login'>
-      
+      <img src={logo} alt='Logo' />
+      <div className='login-form'>
+        <h1>Sign Up</h1>
+        <form>
+          <input type='text' placeholder='Your name' />
+          <input type='email' placeholder='Email' />
+          <input type='password' placeholder='Password' />
+          <button>Sign In</button>
+          <div className='form-help'>
+            <div className='remember'>
+              <input type='checkbox' />
+              <label>Remember me</label>
+            </div>
+            <p>Need Help</p>
+          </div>
+        </form>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default login
+export default Login;
