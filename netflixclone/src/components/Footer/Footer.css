@@ -15,3 +15,15 @@
     width: 30px;
     cursor: pointer;
 }
+.footer ul{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 15px;
+    margin-bottom: 30px;
+    list-style: none;
+}
+.copyright-text
+{
+    color: grey;
+    font-size: 14px;
+}
