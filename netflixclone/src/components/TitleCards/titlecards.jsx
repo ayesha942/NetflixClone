@@ -1,7 +1,6 @@
-// src/components/TitleCards/TitleCards.jsx
-
 import React, { useEffect, useRef, useState } from 'react';
 import './TitleCards.css';
+import { Link } from 'react-router-dom'; // ✅ Import Link
 
 const TitleCards = ({ title = "Movies", category = "now_playing" }) => {
   const [apiData, setApiData] = useState([]);
@@ -17,7 +16,6 @@ const TitleCards = ({ title = "Movies", category = "now_playing" }) => {
   };
 
   useEffect(() => {
-    // Fetch movie data based on category
     const url = `https://api.themoviedb.org/3/movie/${category}?language=en-US&page=1`;
 
     fetch(url, options)
@@ -27,7 +25,6 @@ const TitleCards = ({ title = "Movies", category = "now_playing" }) => {
       })
       .catch(err => console.error(`Error fetching ${category} movies:`, err));
 
-    // Handle horizontal scroll
     const handleWheel = (event) => {
       event.preventDefault();
       if (cardsRef.current) {
@@ -48,7 +45,7 @@ const TitleCards = ({ title = "Movies", category = "now_playing" }) => {
       <h2>{title}</h2>
       <div className='card-list' ref={cardsRef}>
         {apiData.map((movie, index) => (
-          <div className='card' key={index}>
+          <Link to={`/player/${movie.id}`} className='card' key={index}>
             <img
               src={
                 movie.poster_path
@@ -58,7 +55,7 @@ const TitleCards = ({ title = "Movies", category = "now_playing" }) => {
               alt={movie.title || movie.name}
             />
             <p>{movie.title || movie.name}</p>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
