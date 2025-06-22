@@ -91,3 +91,14 @@
   font-weight: bold;
   margin-left: 6px;
 }
+.spinner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.spinner {
+  width: 70px;
+  margin-bottom: 10px;
+}

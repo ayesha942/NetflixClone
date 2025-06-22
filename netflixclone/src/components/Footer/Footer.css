@@ -1,29 +1,49 @@
-.footer
-{
-    padding:30px 4% ;
-    max-width: 1000px;
-    margin: 0 auto;
+.footer {
+  padding: 30px 4%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
+.footer-icons {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
 }
-.footer-icons
-{
-    display: flex;
-    gap: 30px;
-    margin: 40px ,0;
+
+.footer-icons img {
+  width: 20px; /* 👈 Smaller icons like Netflix */
+  height: 20px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
 }
-.footer-icon img{
-    width: 30px;
-    cursor: pointer;
+
+.footer-icons img:hover {
+  opacity: 1;
 }
-.footer ul{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    gap: 15px;
-    margin-bottom: 30px;
-    list-style: none;
+
+.footer ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin-bottom: 30px;
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+  color: #888;
 }
-.copyright-text
-{
-    color: grey;
-    font-size: 14px;
+
+.footer ul li {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.footer ul li:hover {
+  color: #fff;
+}
+
+.copyright-text {
+  color: grey;
+  font-size: 13px;
+  text-align: center;
 }
