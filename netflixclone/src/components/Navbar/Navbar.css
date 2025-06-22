@@ -84,3 +84,8 @@
 .navbar-profile:hover .dropdown {
   display: block;
 }
+/* Add this if it's missing */
+.nav-dark {
+  background-color: rgba(0, 0, 0, 0.85);
+  transition: 0.3s ease;
+}
